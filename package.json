@@ -1,7 +1,7 @@
 {
     "name": "webpack-error-loader",
-    "version": "1.0.0",
-    "description": "",
+    "version": "1.0.1",
+    "description": "Webpack error/warning emitting loader",
     "license": "MIT",
     "repository": "github:jonhartnett/webpack-error-loader",
     "author": {
