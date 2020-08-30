@@ -1,0 +1,28 @@
+{
+    "name": "webpack-error-loader",
+    "version": "1.0.0",
+    "description": "",
+    "license": "MIT",
+    "repository": "github:jonhartnett/webpack-error-loader",
+    "author": {
+        "name": "Jonathan Hartnett"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "watch": "babel src --out-dir dist --source-maps --watch",
+        "build": "babel src --out-dir dist --source-maps"
+    },
+    "dependencies": {
+        "loader-utils": "^2.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.1",
+        "@babel/plugin-proposal-function-bind": "^7.10.5",
+        "@babel/preset-env": "^7.11.0"
+    },
+    "files": [
+        "/dist/**/*"
+    ],
+    "sideEffects": false
+}
