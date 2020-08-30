@@ -69,6 +69,34 @@ module.exports = {
 };
 ```
 
+##### File Size Warning
+Emits a warning when files exceed a maximum size.  
+**Note:** Don't actually use this, there's a [better way](https://webpack.js.org/configuration/performance/#performancemaxentrypointsize) to accomplish this
+```js
+const maxSize = 50000;
+
+module.exports = {
+    //...
+    module: {
+        rules: [
+            //...
+            {
+                loader: {
+                    loader: 'webpack-error-loader',
+                    options: {
+                        type: 'warning',
+                        message(source){
+                            if(source.length > maxSize)
+                                return `File ${this.resourceQuery} exceeds max size (${maxSize})`;
+                        }
+                    }
+                }
+            }
+        ]
+    }
+    //...
+};
+```
 
 ### License
 [MIT](./LICENSE)
